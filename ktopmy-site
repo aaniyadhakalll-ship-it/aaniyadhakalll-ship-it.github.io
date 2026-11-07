@@ -1,0 +1,45 @@
+[1mdiff --git a/index.html b/index.html[m
+[1mindex 15b957c..41d049d 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -3,7 +3,7 @@[m
+ <head>[m
+   <meta charset="UTF-8">[m
+   <meta name="viewport" content="width=device-width, initial-scale=1">[m
+[31m-  <title>Your Name</title>[m
+[32m+[m[32m  <title>Aaniya</title>[m
+   <link rel="stylesheet" href="style.css">[m
+ </head>[m
+ <body>[m
+[36m@@ -66,28 +66,4 @@[m
+           <p>Python · TypeScript · React · FastAPI · PostgreSQL · Redis · Docker · GitHub Actions · k6</p>[m
+         </div>[m
+         <p class="caption">What I use</p>[m
+[31m-      </article>[m
+[31m-[m
+[31m-      <article class="pin" id="contact">[m
+[31m-        <div class="text-card cream">[m
+[31m-          <h2>Contact 💌</h2>[m
+[31m-          <p><a href="mailto:you@example.com">you@example.com</a></p>[m
+[31m-          <p><a href="https://github.com/aaniyadhakalll-ship-it">GitHub</a></p>[m
+[31m-        </div>[m
+[31m-        <p class="caption">Say hi</p>[m
+[31m-      </article>[m
+[31m-[m
+[31m-    </div>[m
+[31m-  </div>[m
+[31m-[m
+[31m-  <script>[m
+[31m-    // Search filters the pins by their text[m
+[31m-    document.getElementById('search').addEventListener('input', function () {[m
+[31m-      const q = this.value.toLowerCase();[m
+[31m-      document.querySelectorAll('.pin').forEach(function (pin) {[m
+[31m-        pin.style.display = pin.textContent.toLowerCase().includes(q) ? '' : 'none';[m
+[31m-      });[m
+[31m-    });[m
+[31m-  </script>[m
+[31m-</body>[m
+[31m-</html>[m
+\ No newline at end of file[m
+[32m+[m[32m      </article>[m
+\ No newline at end of file[m

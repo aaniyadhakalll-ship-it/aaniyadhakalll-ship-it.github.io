@@ -67,3 +67,27 @@
         </div>
         <p class="caption">What I use</p>
       </article>
+
+      <article class="pin" id="contact">
+        <div class="text-card cream">
+          <h2>Contact 💌</h2>
+          <p><a href="mailto:aaniyadhakal@outlook.com">aaniyadhakal@outlook.com</a></p>
+          <p><a href="https://github.com/aaniyadhakalll-ship-it">GitHub</a></p>
+        </div>
+        <p class="caption">Say hi</p>
+      </article>
+
+    </div>
+  </div>
+
+  <script>
+    // Search filters the pins by their text
+    document.getElementById('search').addEventListener('input', function () {
+      const q = this.value.toLowerCase();
+      document.querySelectorAll('.pin').forEach(function (pin) {
+        pin.style.display = pin.textContent.toLowerCase().includes(q) ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
