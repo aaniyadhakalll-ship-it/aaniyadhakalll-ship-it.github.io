@@ -1,0 +1,117 @@
+:root {
+  --pink: #f9d6dc;
+  --cream: #fbf3e6;
+  --grey: #efefef;
+  --text: #333;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: var(--text);
+  background: #fff;
+}
+
+/* Left sidebar */
+.sidebar {
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding-top: 24px;
+  border-right: 1px solid #eee;
+  background: #fff;
+}
+.sidebar a { font-size: 1.5rem; text-decoration: none; }
+.logo {
+  font-size: 1.6rem;
+  color: #e0607e;
+  background: var(--pink);
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+/* Main area */
+.main { margin-left: 80px; padding: 0 24px 40px; }
+
+/* Search bar */
+.searchbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  padding: 16px 0;
+}
+.searchbar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: var(--grey);
+  border-radius: 999px;
+  padding: 16px 24px;
+  font-size: 1rem;
+}
+.searchbar span { margin-right: -48px; z-index: 1; padding-left: 20px; }
+.searchbar input { padding-left: 52px; }
+.avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: #cdd1ff;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+}
+
+/* Masonry grid */
+.grid {
+  column-count: 5;
+  column-gap: 16px;
+}
+@media (max-width: 1400px) { .grid { column-count: 4; } }
+@media (max-width: 1100px) { .grid { column-count: 3; } }
+@media (max-width: 800px)  { .grid { column-count: 2; } }
+@media (max-width: 500px)  { .grid { column-count: 1; } .sidebar { display: none; } .main { margin-left: 0; } }
+
+.pin {
+  break-inside: avoid;
+  margin-bottom: 16px;
+}
+.pin img {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+  transition: transform 0.2s;
+}
+.pin img:hover { transform: scale(1.02); }
+
+.caption {
+  margin: 6px 4px 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Text cards */
+.text-card {
+  border-radius: 16px;
+  padding: 28px 20px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text-card h1 { font-size: 1.5rem; margin: 0 0 8px; }
+.text-card h2 { margin: 0 0 8px; }
+.text-card p { margin: 0; }
+.text-card a { color: #c2410c; }
+.pink  { background: var(--pink); }
+.cream { background: var(--cream); }

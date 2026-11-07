@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="sidebar">
+    <div class="logo">✿</div>
+    <a href="#" title="Home">🏠</a>
+    <a href="#about" title="About">🌸</a>
+    <a href="#projects" title="Projects">🎀</a>
+    <a href="#contact" title="Contact">💌</a>
+  </nav>
+
+  <div class="main">
+    <div class="searchbar">
+      <span>🔍</span>
+      <input id="search" type="text" placeholder="Search my pins...">
+      <div class="avatar">A</div>
+    </div>
+
+    <div class="grid" id="grid">
+
+      <article class="pin" id="about">
+        <div class="text-card pink">
+          <h1>Hi, I'm Aaniya ✿</h1>
+          <p>Software engineering student who builds things end to end and measures them.</p>
+        </div>
+        <p class="caption">About me</p>
+      </article>
+
+      <article class="pin" id="projects">
+        <div class="text-card pink">
+          <h2>Mini Pinterest API</h2>
+          <p>FastAPI, PostgreSQL and Redis backend with a cursor-paginated feed, rate limiting, CI and k6 load tests. Redis caching cut median p95 from 551 ms to 267 ms (3 runs, 2,000 pins, 50 VUs, one laptop).</p>
+          <p><a href="https://github.com/aaniyadhakalll-ship-it/pinboard-api">GitHub →</a></p>
+        </div>
+        <p class="caption">Backend · Python · PostgreSQL · Redis · Docker</p>
+      </article>
+
+      <article class="pin">
+        <div class="text-card cream">
+          <h2>Masonry Feed</h2>
+          <p>Virtualized infinite-scroll React + TypeScript feed: 29 of 690 pins in the DOM. Lighthouse mobile LCP went from 9.4 s to 5.2 s versus an unoptimized version (median of 3).</p>
+          <p><a href="https://github.com/aaniyadhakalll-ship-it/masonry-feed">GitHub →</a></p>
+        </div>
+        <p class="caption">Frontend · React · TypeScript · Vite</p>
+      </article>
+
+      <article class="pin">
+        <div class="text-card cream">
+          <h2>Testing AI-written code</h2>
+          <p>I run what AI scaffolds against real tests and load tests. Example: a startup race between two API workers that unit tests missed. I found it by running the real stack, fixed it with a Postgres advisory lock, and wrote it up.</p>
+          <p><a href="https://github.com/aaniyadhakalll-ship-it/pinboard-api#ai-write-up">Read the write-up →</a></p>
+        </div>
+        <p class="caption">How I work</p>
+      </article>
+
+      <article class="pin">
+        <div class="text-card pink">
+          <h2>Skills</h2>
+          <p>Python · TypeScript · React · FastAPI · PostgreSQL · Redis · Docker · GitHub Actions · k6</p>
+        </div>
+        <p class="caption">What I use</p>
+      </article>
+
+      <article class="pin" id="contact">
+        <div class="text-card cream">
+          <h2>Contact 💌</h2>
+          <p><a href="mailto:you@example.com">you@example.com</a></p>
+          <p><a href="https://github.com/aaniyadhakalll-ship-it">GitHub</a></p>
+        </div>
+        <p class="caption">Say hi</p>
+      </article>
+
+    </div>
+  </div>
+
+  <script>
+    // Search filters the pins by their text
+    document.getElementById('search').addEventListener('input', function () {
+      const q = this.value.toLowerCase();
+      document.querySelectorAll('.pin').forEach(function (pin) {
+        pin.style.display = pin.textContent.toLowerCase().includes(q) ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
