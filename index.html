@@ -1,93 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aaniya</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <nav class="sidebar">
-    <div class="logo">✿</div>
-    <a href="#" title="Home">🏠</a>
-    <a href="#about" title="About">🌸</a>
-    <a href="#projects" title="Projects">🎀</a>
-    <a href="#contact" title="Contact">💌</a>
-  </nav>
-
-  <div class="main">
-    <div class="searchbar">
-      <span>🔍</span>
-      <input id="search" type="text" placeholder="Search my pins...">
-      <div class="avatar">A</div>
-    </div>
-
-    <div class="grid" id="grid">
-
-      <article class="pin" id="about">
-        <div class="text-card pink">
-          <h1>Hi, I'm Aaniya ✿</h1>
-          <p>Software engineering student who builds things end to end and measures them.</p>
-        </div>
-        <p class="caption">About me</p>
-      </article>
-
-      <article class="pin" id="projects">
-        <div class="text-card pink">
-          <h2>Mini Pinterest API</h2>
-          <p>FastAPI, PostgreSQL and Redis backend with a cursor-paginated feed, rate limiting, CI and k6 load tests. Redis caching cut median p95 from 551 ms to 267 ms (3 runs, 2,000 pins, 50 VUs, one laptop).</p>
-          <p><a href="https://github.com/aaniyadhakalll-ship-it/pinboard-api">GitHub →</a></p>
-        </div>
-        <p class="caption">Backend · Python · PostgreSQL · Redis · Docker</p>
-      </article>
-
-      <article class="pin">
-        <div class="text-card cream">
-          <h2>Masonry Feed</h2>
-          <p>Virtualized infinite-scroll React + TypeScript feed: 29 of 690 pins in the DOM. Lighthouse mobile LCP went from 9.4 s to 5.2 s versus an unoptimized version (median of 3).</p>
-          <p><a href="https://github.com/aaniyadhakalll-ship-it/masonry-feed">GitHub →</a></p>
-        </div>
-        <p class="caption">Frontend · React · TypeScript · Vite</p>
-      </article>
-
-      <article class="pin">
-        <div class="text-card cream">
-          <h2>Testing AI-written code</h2>
-          <p>I run what AI scaffolds against real tests and load tests. Example: a startup race between two API workers that unit tests missed. I found it by running the real stack, fixed it with a Postgres advisory lock, and wrote it up.</p>
-          <p><a href="https://github.com/aaniyadhakalll-ship-it/pinboard-api#ai-write-up">Read the write-up →</a></p>
-        </div>
-        <p class="caption">How I work</p>
-      </article>
-
-      <article class="pin">
-        <div class="text-card pink">
-          <h2>Skills</h2>
-          <p>Python · TypeScript · React · FastAPI · PostgreSQL · Redis · Docker · GitHub Actions · k6</p>
-        </div>
-        <p class="caption">What I use</p>
-      </article>
-
-      <article class="pin" id="contact">
-        <div class="text-card cream">
-          <h2>Contact 💌</h2>
-          <p><a href="mailto:aaniyadhakal@outlook.com">aaniyadhakal@outlook.com</a></p>
-          <p><a href="https://github.com/aaniyadhakalll-ship-it">GitHub</a></p>
-        </div>
-        <p class="caption">Say hi</p>
-      </article>
-
-    </div>
-  </div>
-
-  <script>
-    // Search filters the pins by their text
-    document.getElementById('search').addEventListener('input', function () {
-      const q = this.value.toLowerCase();
-      document.querySelectorAll('.pin').forEach(function (pin) {
-        pin.style.display = pin.textContent.toLowerCase().includes(q) ? '' : 'none';
-      });
-    });
-  </script>
-</body>
-</html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aaniya Dhakal | Software engineering student</title><meta name="description" content="Portfolio of Aaniya Dhakal, McMaster software engineering student. Backend, frontend and Python projects, measured.">
+<meta property="og:title" content="Aaniya Dhakal | Software engineering student"><meta property="og:description" content="Portfolio of Aaniya Dhakal, McMaster software engineering student. Backend, frontend and Python projects, measured.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<div class="shell"><aside class="side"><a class="logo" href="index.html" aria-label="Aaniya, home"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="6" r="3.6"/><circle cx="17.7" cy="10.1" r="3.6"/><circle cx="15.5" cy="16.9" r="3.6"/><circle cx="8.5" cy="16.9" r="3.6"/><circle cx="6.3" cy="10.1" r="3.6"/><circle cx="12" cy="12" r="2.2" fill="#F9D6DC"/></svg></a><a class="nav on" href="index.html" aria-label="Home" aria-current="page"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5 12 4l8 7.5V20a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1z"/></svg></a><a class="nav" href="projects.html" aria-label="Projects"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/><rect x="13" y="13" width="7" height="7" rx="2"/></svg></a><a class="nav" href="experience.html" aria-label="Experience"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="7.5" width="17" height="12" rx="2.5"/><path d="M9 7.5V6a1.5 1.5 0 0 1 1.5-1.5h3A1.5 1.5 0 0 1 15 6v1.5M3.5 13h17"/></svg></a><a class="nav" href="hobbies.html" aria-label="Hobbies"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.6 4.3 4.3 0 0 1 19.5 10C19.5 15.4 12 20 12 20z"/></svg></a><a class="nav" href="contact.html" aria-label="Contact"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2.5"/><path d="m4 7.5 8 6 8-6"/></svg></a></aside>
+<main class="main"><div class="top"><div class="searchwrap"><div class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B5559" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><input id="q" type="search" autocomplete="off" aria-label="Search my pins" placeholder="Search my pins" aria-controls="results"></div><div id="results" role="listbox" hidden></div></div><a class="avatar" href="index.html" aria-label="Home">A</a></div><div class="hero"><h1>Hi, I'm Aaniya</h1><p>I build things and measure how well they work.</p></div>
+<div class="cols">
+<div class="col"><a class="tile" href="p-api.html"><div class="card" style="height:400px;background:#F9D6DC"><span></span><span class="chip">p95 551 → 267 ms</span></div><div class="capwrap"><div class="cap">Mini Pinterest API</div><div class="sub">FastAPI, PostgreSQL, Redis</div></div></a><a class="tile" href="hobbies.html"><div class="card" style="height:200px;background:#F6E7CF"><span class="big">Reading, travel, painting</span></div><div class="capwrap"><div class="cap">Hobbies</div><div class="sub">Outside of code</div></div></a></div>
+<div class="col"><a class="tile" href="p-masonry.html"><div class="card" style="height:300px;background:#F3C4CE"><span></span><span class="chip">LCP 9.4 → 5.2 s</span></div><div class="capwrap"><div class="cap">Masonry Feed</div><div class="sub">React, TypeScript, Vite</div></div></a><a class="tile" href="experience.html"><div class="card" style="height:300px;background:#F7DCC8"><span class="chip">Now: Software Engineer, EWB</span><span class="big">Software connecting farmers with people facing food insecurity</span></div><div class="capwrap"><div class="cap">Experience</div><div class="sub">Seven roles</div></div></a></div>
+<div class="col"><a class="tile" href="p-ai.html"><div class="card" style="height:340px;background:#F6E7CF"><span></span><span class="chip">Caught a bug tests missed</span></div><div class="capwrap"><div class="cap">Testing AI-written code</div><div class="sub">How I check what AI writes</div></div></a><a class="tile" href="experience.html#skills"><div class="card" style="height:260px;background:#F9D6DC"><span class="big">Python, TypeScript, React, FastAPI, PostgreSQL</span></div><div class="capwrap"><div class="cap">Skills</div><div class="sub">What I use</div></div></a></div>
+<div class="col"><a class="tile" href="projects.html"><div class="card" style="height:280px;background:#F9D6DC"><span class="big">Ten Python and engineering projects, from audits to budgets</span></div><div class="capwrap"><div class="cap">More I&#x27;ve built</div><div class="sub">Python and engineering</div></div></a><a class="tile" href="contact.html"><div class="card" style="height:320px;background:#F3C4CE"><span class="big xl">Say hi</span></div><div class="capwrap"><div class="cap">Contact</div><div class="sub">Email and GitHub</div></div></a></div>
+</div></main></div>
+<script src="data.js"></script><script src="app.js"></script></body></html>
