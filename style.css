@@ -33,7 +33,14 @@ h1{margin:0;font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:52px;
 .col{flex:1 1 240px;min-width:0;display:flex;flex-direction:column;gap:26px}
 .tile{display:block;text-decoration:none;color:var(--ink);transition:transform .2s ease}
 .tile:hover{transform:translateY(-4px)}
-.card{border-radius:24px;padding:16px;display:flex;flex-direction:column;justify-content:space-between;gap:10px}
+.card{position:relative;overflow:hidden;border-radius:24px;padding:16px;display:flex;flex-direction:column;justify-content:space-between;gap:10px}
+.card::before{content:"";position:absolute;width:130%;aspect-ratio:1;border-radius:50%;background:rgba(255,251,245,.38);left:-15%;top:-30%}
+.art{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:rgba(180,71,95,.34);pointer-events:none;padding-bottom:12%}
+.art>svg{max-width:62%;max-height:55%;height:auto}
+.artphoto{position:relative;width:60%;aspect-ratio:1;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;background:rgba(255,251,245,.55);box-shadow:0 0 0 6px rgba(255,251,245,.6)}
+.artphoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.icon,.cardbot{position:relative;z-index:1}
+.etags{margin-top:14px}
 .cardbot{display:flex;flex-direction:column;gap:10px}
 .icon{width:56px;height:56px;border-radius:50%;background:rgba(255,251,245,.85);color:var(--acc);display:flex;align-items:center;justify-content:center;flex:0 0 56px}
 .chip{align-self:flex-start;background:var(--bg);border-radius:999px;padding:6px 12px;font-size:12.5px;font-weight:500}
@@ -95,7 +102,9 @@ h1{margin:0;font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:52px;
 .hcol h2{margin:0;font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:28px;display:flex;align-items:center;gap:12px}
 .hico{width:44px;height:44px;border-radius:50%;background:rgba(255,251,245,.85);color:var(--acc);display:inline-flex;align-items:center;justify-content:center}
 .books{display:flex;flex-wrap:wrap;gap:16px;margin-top:20px}
-.book{width:calc(50% - 8px);min-width:110px}
+.book{width:calc(50% - 8px);min-width:110px;display:block;text-decoration:none;color:inherit;transition:transform .2s}
+.book:hover{transform:translateY(-4px)}
+.book:hover .bn{color:var(--acc)}
 .bookcover{position:relative;aspect-ratio:2/3;border-radius:10px 14px 14px 10px;padding:12px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;box-shadow:0 8px 18px rgba(59,42,46,.18),inset 6px 0 0 rgba(0,0,0,.08)}
 .bookcover .bt{font-family:'Fraunces',Georgia,serif;font-size:16px;line-height:1.15}
 .bookcover .ba{font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--mut)}
@@ -103,14 +112,28 @@ h1{margin:0;font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:52px;
 .book .bn{font-size:13px;font-weight:500;margin-top:8px;line-height:1.25}
 .book .sub{margin-top:1px}
 .country{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:19px;margin:22px 0 8px}
-.places{display:flex;flex-wrap:wrap;gap:10px}
-.place{flex:1 1 220px;display:flex;align-items:center;gap:12px;background:rgba(255,251,245,.7);border-radius:18px;padding:10px 12px}
-.picon{position:relative;width:48px;height:48px;border-radius:14px;background:var(--pink);color:var(--acc);display:flex;align-items:center;justify-content:center;flex:0 0 48px;overflow:hidden}
-.picon img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.place b{font-size:14.5px;font-weight:600;line-height:1.2;display:block}
+.places{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px}
+.place{display:block;background:rgba(255,251,245,.75);border-radius:20px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .2s}
+.place:hover{transform:translateY(-3px)}
+.pimg{position:relative;aspect-ratio:4/3;background:var(--pink);color:rgba(180,71,95,.5);display:flex;align-items:center;justify-content:center}
+.pimg>svg{width:38%;height:auto}
+.pimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pbody{padding:10px 12px 14px}
+.pbody b{font-size:14.5px;font-weight:600;line-height:1.2;display:block}
+.credit{margin-top:22px;font-size:12.5px;color:var(--mut)}
+.credit a{color:var(--mut)}
+.bookpage{display:flex;flex-wrap:wrap;gap:48px;margin-top:32px;align-items:flex-start}
+.bigbook{width:300px;flex:0 0 300px}
+.bigbook .bookcover{border-radius:12px 18px 18px 12px;padding:22px}
+.bigbook .bt{font-size:26px}
+.btext{flex:1 1 340px;max-width:620px;min-width:0}
+.btext p{font-size:17px;line-height:1.65;margin:0 0 14px}
+.review{margin-top:30px;border-radius:24px;background:var(--cream);padding:26px}
+.review h2{margin:0 0 10px;font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:24px}
+.review p{margin:0;color:var(--mut)}
 .empty{margin-top:16px;padding:20px;border-radius:18px;background:rgba(255,251,245,.6);color:var(--mut);font-size:14px}
 .contactrow{display:flex;flex-wrap:wrap;align-items:center;gap:40px;margin-top:48px}
-.cphoto{position:relative;width:220px;height:260px;border-radius:32px;background:var(--pink);overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:60px;color:var(--acc);font-weight:600}
+.cphoto{position:relative;width:300px;height:360px;border-radius:32px;background:var(--pink);overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:60px;color:var(--acc);font-weight:600}
 :focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 @media (max-width:700px){
  .shell{flex-direction:column}
